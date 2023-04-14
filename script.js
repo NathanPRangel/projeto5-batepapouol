@@ -15,7 +15,8 @@ function acessar() {
     document.querySelector(`.entrando`).classList.remove(`esconder`);
 
 
-    setTimeout(promiseNome.then(Acesso), 5000);
+    setTimeout(5000);
+    promiseNome.then(Acesso);
     promiseNome.catch(erroAcesso);
 }
 

@@ -22,9 +22,10 @@
         <img src="img/logo 1 (1).png" />
 
         <div class="entrar">
-            <input  data-test="input-message" class="inserir-nome" type="text" placeholder="Digite seu nome" id="entrar" />
+            <input data-test="input-message" class="inserir-nome" type="text" placeholder="Digite seu nome"
+                id="entrar" />
 
-            <button  data-test="send-name" class="BotãoDeEntrada" onclick="acessar()">Entrar</button>
+            <button data-test="send-name" class="BotãoDeEntrada" onclick="acessar(this)">Entrar</button>
         </div>
         <div class="entrando esconder">
             <img src="img/entrando.png" />
@@ -50,7 +51,7 @@
                 <ion-icon name="lock-closed"></ion-icon>
             </p>
         </div>
-        <button data-test="send-message" class="enviar" onclick="enviarMensagem()" data-identifier="send-message">
+        <button data-test="send-message" class="enviar" onclick="enviarMensagem(this)" data-identifier="send-message">
             <ion-icon name="paper-plane-outline"></ion-icon>
         </button>
     </footer>
