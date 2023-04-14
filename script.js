@@ -104,7 +104,7 @@ function printMessages(resposta) {
 
                         document.querySelector(`.mensagens`).innerHTML += `
         
-                            <div class="status" data-identifier="message"><div><span class="time">(${resposta.data[j].time})</span>
+                            <div data-test="message" class="status" data-identifier="message"><div><span class="time">(${resposta.data[j].time})</span>
                             <span class="nome"> ${resposta.data[j].from}</span></div>
                             <span class="texto"> ${resposta.data[j].text}</span></div>`;
 
@@ -114,7 +114,7 @@ function printMessages(resposta) {
 
                         document.querySelector(`.mensagens`).innerHTML += `
 
-                            <div class="todos" data-identifier="message"><div><span class="time">(${resposta.data[j].time})</span>
+                            <div data-test="message" class="todos" data-identifier="message"><div><span class="time">(${resposta.data[j].time})</span>
                             <span class="nome"> ${resposta.data[j].from}</span></div>
                             <span class="para"> para</span>
                             <span class="nome"> Todos:</span>
@@ -128,7 +128,7 @@ function printMessages(resposta) {
 
                     document.querySelector(`.mensagens`).innerHTML += `
         
-                        <div class="privado" data-identifier="message"><div><span class="time">(${resposta.data[j].time})</span>
+                        <div data-test="message" class="privado" data-identifier="message"><div><span class="time">(${resposta.data[j].time})</span>
                         <span class="nome"> ${resposta.data[j].from}</span></div>
                         <span class="para"> reservadamente para</span>
                         <span class="nome"> ${resposta.data[j].to}:</span>
