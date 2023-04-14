@@ -1,0 +1,274 @@
+body {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+  
+    background-color: #e5e5e5;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .tela-acesso {
+    position: relative;
+  
+    height: 100%;
+    width: 100%;
+  
+    position: fixed;
+  
+    z-index: 3;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    background-color: #ffffff;
+  }
+  
+  .tela-acesso img {
+    width: 130px;
+  
+    position: absolute;
+    top: 18%;
+    left: calc(50%-130px / 2);
+  }
+  
+  .entrar .entrando {
+    display: flex;
+    flex-direction: column;
+  
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .inserir-nome {
+    all: unset;
+  
+    font-weight: normal;
+    font-size: 18px;
+  
+    display: flex;
+    align-items: center;
+    text-align: center;
+  
+    color: #aeaeae;
+  
+    width: 261px;
+    height: 54px;
+  
+    background: #ffffff;
+    border: 1px solid #d7d7d7;
+  
+    border-radius: 4px;
+  
+    margin-bottom: 15px;
+  }
+  
+  .buttonEntrar {
+    all: unset;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    margin-left: 76px;
+  
+    width: 109px;
+    height: 45px;
+  
+    background: #e7e7e7;
+  
+    border-radius: 9px;
+  
+    font-weight: normal;
+    font-size: 18px;
+  
+    color: #696969;
+  }
+  
+  .entrando img {
+    width: 90px;
+    position: absolute;
+    top: 38%;
+    left: calc(50% - 45px);
+  }
+  
+  .entrando p {
+    font-weight: normal;
+    font-size: 18px;
+    color: #000;
+  
+    padding-left: 5px;
+    padding-top: 25px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    position: fixed;
+    top: 0;
+  
+    z-index: 1;
+  
+    height: 80px;
+    width: 100%;
+  
+    background: #ffffff;
+  
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  header img {
+    width: 75px;
+    height: auto;
+    margin-left: 22px;
+    margin-top: 5px;
+  }
+  
+  header ion-icon {
+    font-size: 38px;
+    margin-right: 22px;
+  }
+  
+  .mensagens {
+    height: 100%;
+    width: 100%;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  
+    padding-bottom: 84px;
+    padding-top: 84px;
+  }
+  
+  .time,
+  .nome,
+  .texto,
+  .para {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+    color: #000;
+  }
+  
+  .time {
+    color: #aaaaaa;
+    margin: auto 10px;
+  }
+  
+  .para {
+    margin: auto 5px;
+  }
+  
+  .nome {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  
+    max-width: 150px;
+    font-weight: bold;
+  }
+  
+  .texto {
+    margin: auto 10px;
+  }
+  
+  .todos,
+  .status,
+  .privado {
+    display: flex;
+    flex-wrap: wrap;
+  
+    justify-content: flex-start;
+    align-items: center;
+  
+    min-height: 40px;
+    width: 100%;
+  
+    margin: 4px 0;
+    border-radius: 2px;
+  }
+  
+  .status div,
+  .todos div,
+  .privado div {
+    align-items: center;
+  }
+  
+  .todos {
+    background-color: #ffffff;
+  }
+  
+  .status {
+    background-color: #dcdcdc;
+  }
+  
+  .privado {
+    background-color: #ffdede;
+  }
+  
+  .mensagem,
+  .enviar {
+    all: unset;
+  
+    box-sizing: border-box;
+  
+    display: flex;
+    align-items: center;
+  }
+  
+  .mensagem {
+    width: 75vw;
+    height: 60px;
+    margin-left: 18px;
+  }
+  
+  .mensagem::placeholder {
+    font-weight: normal;
+    font-size: 18px;
+    font-style: italic;
+    color: #000;
+  }
+  
+  .enviar {
+    font-size: 30px;
+    margin-right: 18px;
+  }
+  
+  .enviar:hover,
+  .buttonEntrar:hover {
+    cursor: pointer;
+    filter: brightness(0.95);
+  }
+  
+  footer div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  footer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  
+    position: fixed;
+    bottom: 0;
+  
+    z-index: 1;
+  
+    height: 80px;
+    width: 100%;
+  
+    background: #ffffff;
+  
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .esconder {
+    display: none;
+  }
+  
