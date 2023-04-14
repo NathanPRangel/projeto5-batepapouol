@@ -1,66 +1,80 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt_br">
 
 <head>
     <meta charset="UTF-8" />
-    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bate-Papo-UOL</title>
+    <title>Bate-papo</title>
     <link rel="stylesheet" href="css/reset.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet" />
-
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-    <div class="tela-acesso">
+    <div class="telaEntrada">
         <img src="img/logo 1 (1).png" />
-
-        <div class="entrar">
-            <input data-test="input-message" class="inserir-nome" type="text" placeholder="Digite seu nome"
-                id="entrar" />
-
-            <button data-test="send-name" class="BotãoDeEntrada" onclick="acessar(this)">Entrar</button>
+        <div class="avisoNome"></div>
+        <input type="text" placeholder="Digite seu nome" style="outline: none;" />
+        <div class="botao" onclick="logar();">Entrar</div>
+        <div class="carregando oculto">
+            <div class="loader"></div>
+            Entrando...
         </div>
-        <div class="entrando esconder">
-            <img src="img/entrando.png" />
-            <p>Entrando...</p>
+    </div>
+    <div class="topo">
+        <img src="img/logo 1 (1).png" />
+        <div>
+            <ion-icon name="people" onclick="mostrarContatos();"></ion-icon>
         </div>
     </div>
 
-    <header>
-        <img src="img/logo 1 (1).png" />
-        <ion-icon name="people-sharp"></ion-icon>
-    </header>
+    <div class="container">
+        <ul class="listaMensagens"></ul>
+    </div>
 
-    <main class="mensagens"></main>
+    <div class="barraInferior">
+        <textarea placeholder="Escreva aqui..." style="border: none;"></textarea>
+        <div class="descricaoMensagem"></div>
+        <ion-icon name="paper-plane-outline" onclick="enviarMensagem();" class="send"></ion-icon>
+    </div>
 
-    <footer>
-        <div>
-            <input data-test="input-name" class="mensagem" placeholder="Escreva aqui..." />
-            <p class="esconder">
-                Seu nome<ion-icon name="person-circle"></ion-icon>
+    <div class="cortina oculto" onclick="mostrarContatos();"></div>
 
-                <ion-icon name="lock-open"></ion-icon>
-
-                <ion-icon name="lock-closed"></ion-icon>
-            </p>
+    <div class="barraLateral">
+        <div class="mensagemLateral">
+            Escolha um contato para enviar mensagem:
         </div>
-        <button data-test="send-message" class="enviar" onclick="enviarMensagem(this)" data-identifier="send-message">
-            <ion-icon name="paper-plane-outline"></ion-icon>
-        </button>
-    </footer>
+
+        <ul class="listaUsuarios"></ul>
+
+        <div class="mensagemLateral">Escolha a visibilidade:</div>
+
+        <ul class="visibilidade">
+            <li class="publico" onclick="selecionarVisibilidade (this);">
+                <div><ion-icon name="lock-open"></ion-icon></div>
+                <div>
+                    Público
+                    <div class="check selecionado">
+                        <ion-icon name="checkmark-outline" class="check"></ion-icon>
+                    </div>
+                </div>
+            </li>
+
+            <li class="reservado desabilitado" onclick="selecionarVisibilidade (this);">
+                <div><ion-icon name="lock-closed"></ion-icon></div>
+                <div>
+                    Privado
+                    <div class="check">
+                        <ion-icon name="checkmark-outline" class="check"></ion-icon>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-    <script src="script.js"></script>
+    <script src="script.js" async defer></script>
 </body>
 
 </html>
