@@ -14,8 +14,8 @@
     <div class="telaEntrada">
         <img src="img/logo 1 (1).png" />
         <div class="avisoNome"></div>
-        <input type="text" placeholder="Digite seu nome" style="outline: none;" />
-        <div class="botao" onclick="logar();">Entrar</div>
+        <input data-test="input-name" type="text" placeholder="Digite seu nome" style="outline: none;" />
+        <div data-test="send-name" class="botao" onclick="logar();">Entrar</div>
         <div class="carregando oculto">
             <div class="loader"></div>
             Entrando...
@@ -24,23 +24,23 @@
     <div class="topo">
         <img src="img/logo 1 (1).png" />
         <div>
-            <ion-icon name="people" onclick="mostrarContatos();"></ion-icon>
+            <ion-icon data-test="open-participants" name="people" onclick="mostrarContatos();"></ion-icon>
         </div>
     </div>
 
     <div class="container">
-        <ul class="listaMensagens"></ul>
+        <ul data-test="message" class="listaMensagens"></ul>
     </div>
 
     <div class="barraInferior">
-        <textarea placeholder="Escreva aqui..." style="border: none;"></textarea>
+        <textarea data-test="input-message" placeholder="Escreva aqui..." style="border: none;"></textarea>
         <div class="descricaoMensagem"></div>
-        <ion-icon name="paper-plane-outline" onclick="enviarMensagem();" class="send"></ion-icon>
+        <ion-icon data-test="send-message" name="paper-plane-outline" onclick="enviarMensagem();" class="send"></ion-icon>
     </div>
 
     <div class="cortina oculto" onclick="mostrarContatos();"></div>
 
-    <div class="barraLateral">
+    <div data-test="overlay" class="barraLateral">
         <div class="mensagemLateral">
             Escolha um contato para enviar mensagem:
         </div>

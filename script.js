@@ -163,10 +163,10 @@ function carregarUsuarios(resposta) {
             achou = true;
         }
         return `
-        <li class="usuario" onclick="selecionarContato(this);">
+        <li data-test="participant" class="usuario" onclick="selecionarContato(this);">
             <div><ion-icon name="person-circle"></ion-icon></div>
             <div>${objeto.name}
-            <div class="check ${objeto.name === contato ? "selecionado" : ""
+            <div data-test="check" class="check ${objeto.name === contato ? "selecionado" : ""
             }"><ion-icon name="checkmark-outline" class="check"></ion-icon></div>
             </div>
         </li>
@@ -180,10 +180,10 @@ function carregarUsuarios(resposta) {
     trocarAutomatico();
 
     document.querySelector(".listaUsuarios").innerHTML = `
-        <li class="usuarioTodos" onclick="selecionarContato(this);">
+        <li data-test="participant" class="usuarioTodos" onclick="selecionarContato(this);">
             <div><ion-icon name="people"></ion-icon></div>
             <div>Todos
-            <div class="check ${contato === "" ? "selecionado" : ""
+            <div data-test="check" class="check ${contato === "" ? "selecionado" : ""
         }"><ion-icon name="checkmark-outline" class="check"></ion-icon></div>
             </div>
          </li>`;
