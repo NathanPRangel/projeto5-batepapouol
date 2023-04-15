@@ -50,17 +50,17 @@
         <div class="mensagemLateral">Escolha a visibilidade:</div>
 
         <ul class="visibilidade">
-            <li class="publico" onclick="selecionarVisibilidade (this);">
+            <li data-test="public" class="publico" onclick="selecionarVisibilidade (this);">
                 <div><ion-icon name="lock-open"></ion-icon></div>
                 <div>
                     Público
-                    <div class="check selecionado">
+                    <div data-test="check" class="check selecionado">
                         <ion-icon name="checkmark-outline" class="check"></ion-icon>
                     </div>
                 </div>
             </li>
 
-            <li class="reservado desabilitado" onclick="selecionarVisibilidade (this);">
+            <li data-test="private" class="reservado desabilitado" onclick="selecionarVisibilidade (this);">
                 <div><ion-icon name="lock-closed"></ion-icon></div>
                 <div>
                     Privado

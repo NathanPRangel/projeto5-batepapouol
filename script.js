@@ -165,7 +165,7 @@ function carregarUsuarios(resposta) {
         return `
         <li data-test="participant" class="usuario" onclick="selecionarContato(this);">
             <div><ion-icon name="person-circle"></ion-icon></div>
-            <div>${objeto.name}
+            <div data-test="participant">${objeto.name}
             <div data-test="check" class="check ${objeto.name === contato ? "selecionado" : ""
             }"><ion-icon name="checkmark-outline" class="check"></ion-icon></div>
             </div>
@@ -182,7 +182,7 @@ function carregarUsuarios(resposta) {
     document.querySelector(".listaUsuarios").innerHTML = `
         <li data-test="participant" class="usuarioTodos" onclick="selecionarContato(this);">
             <div><ion-icon name="people"></ion-icon></div>
-            <div>Todos
+            <div  data-test="all" >Todos
             <div data-test="check" class="check ${contato === "" ? "selecionado" : ""
         }"><ion-icon name="checkmark-outline" class="check"></ion-icon></div>
             </div>
