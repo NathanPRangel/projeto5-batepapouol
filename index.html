@@ -34,7 +34,7 @@
 
     <div class="barraInferior">
         <textarea data-test="input-message" placeholder="Escreva aqui..." style="border: none;"></textarea>
-        <div class="descricaoMensagem"></div>
+        <div  data-test="recipient" class="descricaoMensagem"></div>
         <ion-icon data-test="send-message" name="paper-plane-outline" onclick="enviarMensagem();" class="send"></ion-icon>
     </div>
 
@@ -64,7 +64,7 @@
                 <div><ion-icon name="lock-closed"></ion-icon></div>
                 <div>
                     Privado
-                    <div class="check">
+                    <div data-test="check" class="check">
                         <ion-icon name="checkmark-outline" class="check"></ion-icon>
                     </div>
                 </div>

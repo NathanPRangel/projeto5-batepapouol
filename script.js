@@ -180,9 +180,9 @@ function carregarUsuarios(resposta) {
     trocarAutomatico();
 
     document.querySelector(".listaUsuarios").innerHTML = `
-        <li data-test="participant" class="usuarioTodos" onclick="selecionarContato(this);">
+        <li data-test="all" class="usuarioTodos" onclick="selecionarContato(this);">
             <div><ion-icon name="people"></ion-icon></div>
-            <div  data-test="all" >Todos
+            <div>Todos
             <div data-test="check" class="check ${contato === "" ? "selecionado" : ""
         }"><ion-icon name="checkmark-outline" class="check"></ion-icon></div>
             </div>
