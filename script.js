@@ -95,7 +95,7 @@ function rotularMensagens(objeto) {
     }
 
     const template = `
-    <li class="${classe}">
+    <li data-test="message" class="${classe}">
         <span>
             <span class="hour">(${objeto.time})</span> 
             <span class="name"> ${objeto.from} </span>
